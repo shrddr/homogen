@@ -392,7 +392,7 @@ window.plugin.homogen.calcPath = function(output) {
     }
   }
   totalDistance = L.GeometryUtil.readableDistance(totalDistance, true);
-  results = `path1 corrected distance: ${totalDistance}<br/>`;
+  results = `path1 lazy distance: ${totalDistance}<br/>`;
   window.plugin.homogen.resultsDiv.append("<p>"+results+"</p>");
   window.plugin.drawTools.save();
 }
