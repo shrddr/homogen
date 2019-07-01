@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         homoGen
 // @namespace    https://github.com/jonatkins/ingress-intel-total-conversion
-// @version      1.0
+// @version      1.001
 // @description  find a homogenous field
 // @author       You
 // @match        https://*.ingress.com/intel*
