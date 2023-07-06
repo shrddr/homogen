@@ -16,13 +16,14 @@ Links are colored according to nesting level, and the path to walk is black.
 
 The base for calculations is center of current viewport, and only visible portals are used. Three 120° sectors (A, B, C) are formed with inner portals sorted from the center outwards. The script checks a three-tuple of candidates (Ai, Bj, Ck) and increments i/j/k until the candidates form a valid homogeneous field.
 
-If the search is successful, it draws the resulting field and a lazy fielding path. The fielding path doesn't account for ground obstacles but does limit the movement to 40m action radius, hence "lazy". Designed for low scale, high density operations.
+If the search is successful, it draws the resulting field and a lazy fielding path. The fielding path doesn't account for ground obstacles but does limit the movement to 40m action radius, hence "lazy". Designed for low scale, high density operations (at the point when straight lines start to curve, `point_in_triangle` func might start lying).
 
 ### TODO
 
 - Only builds L5 fields now. Add a dropdown to select required level.
 - Only builds a bottom-base/top-tipped triangle now. Add a checkbox to search for a flipped triangle. Maybe even an "advanced settings" section for fine-tuning the angles.
 - The fielding path is hardcoded (bottom > right > left > tip). It should be possible to compute alternatives, and give nice UI to switch between them.
+- Fix `point_in_triangle` to use spherical geometry instead of planar.
 
 ### Development
 
